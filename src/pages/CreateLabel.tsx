@@ -1,5 +1,7 @@
+import CreateLabelForm from '../layouts/CreateLabelForm'
+
 const CreateLabel = () => {
-  return <div>CreateLabel</div>
+  return <CreateLabelForm />
 }
 
 export default CreateLabel
