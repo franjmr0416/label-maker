@@ -8,7 +8,9 @@ interface FormControlProps extends InputHTMLAttributes<HTMLInputElement> {
 const FormControl = ({ label, name, type, ...rest }: FormControlProps) => {
   return (
     <Fragment>
-      <label htmlFor={name}>{label}</label>
+      <label htmlFor={name} className='font-primary'>
+        {label}
+      </label>
       <input id={name} name={name} type={type} {...rest} />
     </Fragment>
   )
