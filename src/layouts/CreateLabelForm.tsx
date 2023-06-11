@@ -21,9 +21,9 @@ const CreateLabelForm = () => {
     },
   })
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <h2>Agrega los datos de la etiqueta</h2>
-      <div>
+    <form onSubmit={formik.handleSubmit} className='w-full'>
+      <h2 className='font-bold text-2xl'>Agrega los datos de la etiqueta</h2>
+      <div className='flex flex-col gap-4 p-8'>
         <FormControl
           label='Nombre producto'
           name='nombre'
@@ -53,7 +53,12 @@ const CreateLabelForm = () => {
           onChange={formik.handleChange}
         />
       </div>
-      <button type='submit'>Submit</button>
+      <button
+        type='submit'
+        className='w-fit shadow-lg bg-ctm-primary hover:bg-ctm-secondary text-[#fff] px-8 py-2 rounded-lg text-lg font-medium'
+      >
+        Crear etiqueta
+      </button>
     </form>
   )
 }

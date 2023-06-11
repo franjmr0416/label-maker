@@ -1,4 +1,4 @@
-import { Fragment, InputHTMLAttributes } from 'react'
+import { InputHTMLAttributes } from 'react'
 
 interface FormControlProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string
@@ -7,12 +7,18 @@ interface FormControlProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 const FormControl = ({ label, name, type, ...rest }: FormControlProps) => {
   return (
-    <Fragment>
-      <label htmlFor={name} className='font-primary'>
+    <div className='flex flex-col gap-1 lg:w-64'>
+      <label htmlFor={name} className='font-primary font-semibold text-sm'>
         {label}
       </label>
-      <input id={name} name={name} type={type} {...rest} />
-    </Fragment>
+      <input
+        id={name}
+        name={name}
+        type={type}
+        {...rest}
+        className='border rounded-lg'
+      />
+    </div>
   )
 }
 
