@@ -52,6 +52,55 @@ const CreateLabelForm = () => {
           value={formik.values.lote}
           onChange={formik.handleChange}
         />
+        <FormControl
+          label='Fecha de fabricación'
+          name='fecha_fabricacion'
+          type='date'
+          value={formik.values.fecha_fabricacion}
+          onChange={formik.handleChange}
+        />
+        <FormControl
+          label='Fecha de caducidad'
+          name='fecha_caducidad'
+          type='date'
+          value={formik.values.fecha_caducidad}
+          onChange={formik.handleChange}
+        />
+        <FormControl
+          label='Dosis'
+          name='dosis'
+          type='text'
+          value={formik.values.dosis}
+          onChange={formik.handleChange}
+        />
+        <FormControl
+          label='Info. Empresa'
+          name='info_empresa'
+          type='text'
+          value={formik.values.info_empresa}
+          onChange={formik.handleChange}
+        />
+        <FormControl
+          label='Recomendaciones'
+          name='lote'
+          type='text'
+          value={formik.values.recomendaciones}
+          onChange={formik.handleChange}
+        />
+        <FormControl
+          label='Peso'
+          name='lote'
+          type='number'
+          value={formik.values.peso}
+          onChange={formik.handleChange}
+        />
+        <FormControl
+          label='Tipo'
+          name='lote'
+          type='text'
+          value={formik.values.tipo}
+          onChange={formik.handleChange}
+        />
       </div>
       <button
         type='submit'

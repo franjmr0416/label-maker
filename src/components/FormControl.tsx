@@ -16,7 +16,7 @@ const FormControl = ({ label, name, type, ...rest }: FormControlProps) => {
         name={name}
         type={type}
         {...rest}
-        className='border rounded-lg'
+        className='border border-ctm-medium-gray shadow-md rounded-lg p-1 active:accent-ctm-primary'
       />
     </div>
   )
