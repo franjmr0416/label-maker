@@ -1,7 +1,7 @@
 import { useFormik } from 'formik'
 import FormControl from '../components/FormControl'
 import FormGroup from '../components/FormGroup'
-
+import { MdPictureAsPdf } from 'react-icons/md'
 const CreateLabelForm = () => {
   const formik = useFormik({
     initialValues: {
@@ -118,8 +118,9 @@ const CreateLabelForm = () => {
       </div>
       <button
         type='submit'
-        className='w-fit shadow-lg bg-ctm-primary hover:bg-ctm-secondary text-[#fff] px-8 py-2 rounded-lg text-lg font-medium'
+        className='w-fit shadow-lg bg-ctm-primary hover:bg-ctm-secondary text-[#fff] px-8 py-2 rounded-lg text-lg font-medium flex gap-1 items-center'
       >
+        <MdPictureAsPdf className='text-2xl' />
         Crear etiqueta
       </button>
     </form>
