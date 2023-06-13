@@ -5,16 +5,18 @@ import { MdPictureAsPdf } from 'react-icons/md'
 const CreateLabelForm = () => {
   const formik = useFormik({
     initialValues: {
-      nombre: '',
-      descripcion: '',
-      codigo_producto: '',
-      lote: '',
-      fecha_fabricacion: '',
-      fecha_caducidad: '',
-      dosis: '',
-      info_empresa: '',
-      recomendaciones: '',
-      peso: 1,
+      nombre: 'francisco reforzado',
+      descripcion: 'Saborizante en pasta sabor queso asadero reforzado.',
+      codigo_producto: 'MAEPS00062',
+      lote: 'DD251022/156',
+      fecha_fabricacion: '2022-10-25',
+      fecha_caducidad: '2023-10-25',
+      dosis: '0.12',
+      info_empresa:
+        'Alimentinna S. DE R.L. DE C.V. Antonio García Cubas 1200, Alfredo Vazquez Bonfil, 38010 Celaya, Gto. Tel. (461) 279-7264',
+      recomendaciones:
+        'Almacenar en lugar seco y fresco a una temperatura no mayor a 25°C.',
+      peso: 50,
       tipo: 'muestra',
     },
     onSubmit: (values) => {
@@ -53,7 +55,7 @@ const CreateLabelForm = () => {
             onChange={formik.handleChange}
           />
           <FormControl
-            label='Dosis'
+            label='Dosis (%)'
             name='dosis'
             type='text'
             value={formik.values.dosis}
