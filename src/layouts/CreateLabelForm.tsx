@@ -2,7 +2,12 @@ import { useFormik } from 'formik'
 import FormControl from '../components/FormControl'
 import FormGroup from '../components/FormGroup'
 import { MdPictureAsPdf } from 'react-icons/md'
+import { useSetAtom } from 'jotai'
+import { isVisibleDocViewer } from '../jotai/jotai'
+
 const CreateLabelForm = () => {
+  const showDocViewer = useSetAtom(isVisibleDocViewer)
+
   const formik = useFormik({
     initialValues: {
       nombre: 'francisco reforzado',
@@ -19,8 +24,9 @@ const CreateLabelForm = () => {
       peso: 50,
       tipo: 'muestra',
     },
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2))
+    onSubmit: () => {
+      //alert(JSON.stringify(values, null, 2))
+      showDocViewer(true)
     },
   })
   return (
