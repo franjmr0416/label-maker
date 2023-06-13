@@ -1,4 +1,6 @@
 import { Document, Page, View, Text, StyleSheet } from '@react-pdf/renderer'
+import { useAtomValue } from 'jotai'
+import { labelContent } from '../jotai/jotai'
 const styles = StyleSheet.create({
   page: {
     flexDirection: 'row',
@@ -11,11 +13,13 @@ const styles = StyleSheet.create({
   },
 })
 const NewDocument = () => {
+  const labelData = useAtomValue(labelContent)
+
   return (
     <Document>
       <Page size={'LETTER'} style={styles.page}>
         <View style={styles.section}>
-          <Text>Prueba</Text>
+          <Text>{JSON.stringify(labelData)}</Text>
         </View>
       </Page>
     </Document>

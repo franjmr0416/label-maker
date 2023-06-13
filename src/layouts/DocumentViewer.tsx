@@ -9,8 +9,13 @@ const DocumentViewer = () => {
   return (
     <div className='z-10 absolute w-full h-screen top-0 flex justify-center items-center bg-ctm-dark-gray/60'>
       <div className=''>
-        <div>
-          <button onClick={() => showDocViewer(false)}>Cerrar</button>
+        <div className='flex justify-end p-2'>
+          <button
+            onClick={() => showDocViewer(false)}
+            className='font-primary bg-ctm-primary hover:bg-ctm-secondary px-8 py-1 text-[#fff] rounded-lg shadow-sm shadow-ctm-light-primary'
+          >
+            CERRAR
+          </button>
         </div>
         <PDFViewer style={{ width: '80vw', height: '85vh' }}>
           <NewDocument />
